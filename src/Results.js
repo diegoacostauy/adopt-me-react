@@ -2,6 +2,7 @@ import React from "react";
 import Pet from "./Pet";
 
 const Results = ({ pets }) => {
+  console.log(pets[0]);
   return (
     <div className="search">
       {pets.length === 0 ? (
@@ -10,6 +11,7 @@ const Results = ({ pets }) => {
         pets.map(pet => (
           <Pet
             animal={pet.type}
+            id={pet.id}
             key={pet.id}
             name={pet.name}
             breed={pet.breeds.primary}
