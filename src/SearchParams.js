@@ -13,6 +13,7 @@ const SearchParams = () => {
   const [theme, setTheme] = useContext(ThemeContext);
 
   async function requestPets() {
+    console.log("requets");
     const { animals } = await pet.animals({
       location,
       breed,
