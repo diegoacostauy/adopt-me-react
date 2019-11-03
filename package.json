@@ -2,13 +2,16 @@
   "name": "adopt-me-react",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://diegaco.github.io/adopt-me-react",
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
     "dev:mock": "cross-env PET_MOCK=mock npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
-    "format": "prettier \"src/**/*.{js,html}\" --write"
+    "format": "prettier \"src/**/*.{js,html}\" --write",
+    "predeploy": "parcel build src/index.html",
+    "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
@@ -31,6 +34,7 @@
   "dependencies": {
     "@frontendmasters/pet": "^1.0.3",
     "@reach/router": "^1.2.1",
+    "gh-pages": "^2.1.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0"
   },
